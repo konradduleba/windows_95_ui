@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr var(--input-width, 220px);
+  align-items: flex-start;
+}
+
+.input {
+  min-height: 20px;
+  height: 100%;
+  width: 100%;
+  font-size: 12px;
+
+  max-width: 100%;
+  background-color: var(--form-bg-color);
+  padding-left: 4px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--form-border-left-top) var(--form-border-bottom-right)
+    var(--form-border-bottom-right) var(--form-border-left-top);
+  box-shadow: inset 1px 1px 0 0 var(--form-box-shadow-top-left),
+    inset -1px -1px 0 0 var(--form-box-shadow-bottom-right);
+  outline: none;
+}
+
+.invalid {
+  border-color: var(--form-error-color);
+  box-shadow: none;
+}

@@ -1,0 +1,7 @@
+export {
+  WINDOW_POSITION_Y,
+  WINDOW_WIDTH,
+  REGISTER_USER_LOGIN_TEST_ID,
+  REGISTER_USER_TASK_ID,
+  REGISTER_USER_TEST_ID,
+} from "./register-user.consts";

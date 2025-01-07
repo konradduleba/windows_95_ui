@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  gap: 8px;
+  padding: 0 6px 12px 6px;
+}
+
+.align-left {
+  justify-content: flex-start;
+}
+
+.align-center {
+  justify-content: center;
+}
+
+.align-right {
+  justify-content: flex-end;
+}
+
+.button {
+  width: 80px;
+}
+
+.disabled {
+  color: var(--button-disabled-color);
+}

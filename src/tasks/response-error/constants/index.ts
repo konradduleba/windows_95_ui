@@ -1,0 +1,7 @@
+export {
+  WINDOW_POSITION_Y,
+  WINDOW_WIDTH,
+  RESPONSE_ERROR_TASK_ID,
+  RESPONSE_ERROR_TEST_ID,
+  FOOTER_ALIGN,
+} from "./response-error.consts";

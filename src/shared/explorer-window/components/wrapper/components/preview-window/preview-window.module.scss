@@ -1,0 +1,8 @@
+.preview {
+  position: absolute;
+
+  border-width: 1.5px;
+  border-color: var(--preview-border-color);
+  border-style: dashed;
+  border-radius: var(--screen-border-radius);
+}

@@ -1,0 +1,16 @@
+.container {
+  padding: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--container-border-left-top)
+    var(--container-border-bottom-right) var(--container-border-bottom-right)
+    var(--container-border-left-top);
+  box-shadow: inset 1px 1px 0 0 var(--container-box-shadow-top-left),
+    inset -1px -1px 0 0 var(--container-box-shadow-bottom-right);
+  background-color: var(--container-bg-color);
+  display: grid;
+  grid-template-rows: var(--row-height) calc(
+      calc(6 * var(--row-height)) + calc(5 * var(--row-gap))
+    );
+  gap: var(--row-gap);
+}

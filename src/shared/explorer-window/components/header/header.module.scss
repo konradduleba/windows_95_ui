@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--explorer-heading-bg-color);
+}
+
+.inactive {
+  background-color: var(--explorer-heading-inactive-bg-color);
+}
+
+.options {
+  padding: 4px;
+  display: flex;
+  gap: 4px;
+}

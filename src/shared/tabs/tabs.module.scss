@@ -1,0 +1,9 @@
+.wrapper {
+  display: grid;
+  grid-template-rows: 22px 1fr;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5px;
+}

@@ -1,0 +1,24 @@
+$display-border-radius-scale: 2;
+$display-border-radius: calc(
+  var(--screen-border-radius) * $display-border-radius-scale
+);
+
+.monitor {
+  display: grid;
+  border: 1px solid var(--MBP-color);
+  border-radius: $display-border-radius $display-border-radius 0 0;
+}
+
+.title {
+  padding: 8px 0;
+  background-color: var(--MBP-title-bg-color);
+  text-align: center;
+  color: var(--MBP-color);
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.display {
+  padding: 10px;
+  border-radius: $display-border-radius $display-border-radius 0 0;
+  background-color: var(--MBP-screen-color);
+}

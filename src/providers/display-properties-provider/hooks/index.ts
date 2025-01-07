@@ -1,0 +1,1 @@
+export { useDisplayProperties } from "./useDisplayProperties";

@@ -1,0 +1,15 @@
+.day {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selected {
+  background-color: var(--calendar-day-selected-bg);
+}
+
+.textSelected {
+  color: var(--calendar-day-selected-color);
+}

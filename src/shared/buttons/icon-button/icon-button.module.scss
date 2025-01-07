@@ -1,0 +1,18 @@
+.iconButton {
+  &:active {
+    border-color: var(--border-right-bottom) var(--border-left-top)
+      var(--border-left-top) var(--border-right-bottom);
+
+    svg {
+      padding: 1px 0 0 1px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus:active {
+    outline: none;
+  }
+}

@@ -1,0 +1,16 @@
+.subApps {
+  position: absolute;
+  top: -1px;
+  left: 97%;
+  width: 180px;
+  background-color: var(--start-menu-bg-color);
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--border-left-top) var(--border-right-bottom)
+    var(--border-right-bottom) var(--border-left-top);
+}
+
+.smallSize {
+  transform: scale(0.7) translateY(-20%);
+  left: 78%;
+}

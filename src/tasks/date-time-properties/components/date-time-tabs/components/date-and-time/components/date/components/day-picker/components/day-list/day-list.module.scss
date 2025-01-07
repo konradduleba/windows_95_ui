@@ -1,0 +1,8 @@
+.dayList {
+  display: grid;
+  grid-template-rows: repeat(6, var(--row-height));
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--row-gap);
+  align-items: center;
+  justify-items: center;
+}

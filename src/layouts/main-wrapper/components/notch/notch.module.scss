@@ -1,0 +1,23 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999999999;
+}
+
+$notch-height: 30px;
+$notch-width: 130px;
+
+.notch {
+  --r: var(--screen-border-radius);
+  border-inline: var(--r) solid #0000;
+  border-radius: calc(2 * var(--r)) calc(2 * var(--r)) 0 0 / var(--r);
+  mask: radial-gradient(var(--r) at var(--r) 0, #0000 98%, #000 101%)
+      calc(-1 * var(--r)) 100%/100% var(--r) repeat-x,
+    conic-gradient(var(--MBP-screen-color) 0 0) padding-box;
+  background: var(--MBP-screen-color) border-box;
+  width: $notch-width;
+  height: $notch-height;
+  transform: rotate(180deg);
+}

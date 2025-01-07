@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--windows-font-family);
+  user-select: none;
+}
+
+:root {
+  --screen-border-radius: 8px;
+  --screen-width: 768px;
+  --screen-height: calc(var(--screen-width) * 0.75);
+  --windows-font-family: "MS Sans Serif";
+  --border-left-top: #ffffff;
+  --border-right-bottom: #1d1b1b;
+  --border-active: #727171;
+}
+
+ul {
+  list-style: none;
+}

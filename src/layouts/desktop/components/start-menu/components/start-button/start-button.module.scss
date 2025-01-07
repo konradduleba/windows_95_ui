@@ -1,0 +1,19 @@
+.startButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+
+  &:focus {
+    outline-offset: -3.5px;
+  }
+}
+
+.icon {
+  transform: scale(0.6) translate(-5px, 2px);
+}
+
+.text {
+  transform: translate(-6px, 1px);
+}

@@ -1,0 +1,8 @@
+.screen {
+  position: relative;
+  width: var(--screen-width);
+  height: var(--screen-height);
+  border-radius: var(--screen-border-radius) var(--screen-border-radius) 0 0;
+  background-color: var(--display-background-fallback);
+  overflow: hidden;
+}

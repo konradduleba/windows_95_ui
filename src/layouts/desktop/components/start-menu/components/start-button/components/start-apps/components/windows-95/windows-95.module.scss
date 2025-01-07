@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--start-menu-windows-95-bg);
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 6px 2px;
+}
+
+.windows {
+  color: var(--start-menu-windows-95-color);
+  transform: rotate(-90deg);
+  font-size: 24px;
+}

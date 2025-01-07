@@ -1,0 +1,35 @@
+.item {
+  --bg-color: var(--heading-primary-color);
+
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  padding-left: 8px;
+  column-gap: 8px;
+  height: 40px;
+  align-items: center;
+  text-align: left;
+
+  &:hover {
+    background-color: var(--start-menu-bg-on-hover);
+    --bg-color: var(--start-menu-color-on-hover);
+  }
+
+  &:focus-visible {
+    outline: 1px dashed var(--form-outline-color);
+    outline-offset: -4 px;
+  }
+}
+
+.name {
+  color: var(--bg-color);
+}
+
+.options {
+  position: relative;
+  grid-template-columns: 32px 1fr 16px;
+}
+
+.chevron {
+  transform: rotate(-90deg);
+  fill: var(--bg-color);
+}

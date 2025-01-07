@@ -1,0 +1,16 @@
+.mapContainer {
+  padding: 1px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--container-border-left-top)
+    var(--container-border-bottom-right) var(--container-border-bottom-right)
+    var(--container-border-left-top);
+  box-shadow: inset 1px 1px 0 0 var(--container-box-shadow-top-left),
+    inset -1px -1px 0 0 var(--container-box-shadow-bottom-right);
+  display: flex;
+  height: 210px;
+}
+
+.map {
+  width: 100%;
+}

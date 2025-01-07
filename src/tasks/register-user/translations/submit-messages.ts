@@ -1,0 +1,25 @@
+import { defineMessage } from "@lingui/macro";
+
+export const SUBMIT_MESSAGES = {
+  SUCCESS_TITLE: defineMessage({
+    id: "REGISTER_USER.RESPONSE.SUCCESS_TITLE",
+  }),
+  SUCCESSFULLY_CREATER_USER: defineMessage({
+    id: "REGISTER_USER.RESPONSE.SUCCESSFULLY_CREATER_USER",
+  }),
+  ERROR_TITLE: defineMessage({
+    id: "REGISTER_USER.RESPONSE.ERROR_TITLE",
+  }),
+  WEAK_PASSWORD: defineMessage({
+    id: "REGISTER_USER.RESPONSE.WEAK_PASSWORD",
+  }),
+  USERNAME_OR_EMAIL_EXISTS: defineMessage({
+    id: "REGISTER_USER.RESPONSE.USERNAME_OR_EMAIL_EXISTS",
+  }),
+  SOMETHING_WENT_WRONG: defineMessage({
+    id: "REGISTER_USER.RESPONSE.SOMETHING_WENT_WRONG",
+  }),
+  LOGIN_BUTTON: defineMessage({
+    id: "REGISTER_USER.RESPONSE.LOGIN_BUTTON",
+  }),
+};

@@ -1,0 +1,7 @@
+.content {
+  border-width: 1px 1.5px 1.5px 1px;
+  border-style: solid;
+  border-color: var(--border-left-top) var(--border-right-bottom)
+    var(--border-right-bottom) var(--border-left-top);
+  background-color: var(--tab-bg-color);
+}

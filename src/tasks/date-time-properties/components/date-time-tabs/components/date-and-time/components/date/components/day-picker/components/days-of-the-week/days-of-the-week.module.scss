@@ -1,0 +1,13 @@
+.daysOfTheWeek {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  height: 100%;
+  background-color: var(--date-property-day-heading-bg);
+  gap: var(--row-gap);
+  align-items: center;
+  justify-items: center;
+}
+
+.letter {
+  color: var(--heading-alt-color-2);
+}

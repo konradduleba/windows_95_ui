@@ -1,0 +1,78 @@
+:root {
+  /* BASE COLORS */
+  --layout-bg-color: #252525;
+  --MBP-color: #a3a1a1;
+  --MBP-title-bg-color: #232323;
+  --MBP-screen-color: #000;
+
+  /* DISPLAY PROPERTIES COLORS */
+  --display-background-fallback: #54a8a8;
+
+  /* DESKTOP */
+  --desktop-bg-color: #c0c4c8;
+
+  /* TYPOGRAPHY COLORS */
+  --heading-primary-color: #000;
+  --heading-alt-color: #fff;
+  --heading-alt-color-2: #c0c4c8;
+
+  /* EXPLORER WINDOW COLORS */
+  --explorer-bg-color: #c0c0c0;
+  --explorer-heading-bg-color: #000080;
+  --explorer-heading-inactive-bg-color: #84888c;
+  --preview-border-color: #fff;
+
+  /* BUTTON COLORS */
+  --button-bg-color: #c0c0c0;
+  --button-outline-color: #000;
+  --button-disabled-color: #84888c;
+
+  /* TABS COLORS */
+  --tab-bg-color: #c0c0c0;
+
+  /* CLOCK COLORS */
+  --clock-border-left-top: #888c90;
+  --clock-border-right-bottom: #fff;
+
+  /* DATE PROPERTIES COLORS */
+  --date-property-day-heading-bg: #84888c;
+
+  /* TOOLTIP COLORS */
+  --tooltip-bg-color: #c0c4c8;
+
+  /* CONTENT BOX COLORS */
+  --content-box-border-color-alt: #84888c;
+  --content-box-border-color: #fff;
+  --content-box-title-bg-color: #c0c0c0;
+
+  /* COMMON CONTAINER COLORS*/
+  --container-border-left-top: #84888c;
+  --container-border-bottom-right: #fff;
+  --container-box-shadow-top-left: #000;
+  --container-box-shadow-bottom-right: #c0c0c0;
+  --container-bg-color: #fff;
+
+  /* FORMS COLORS */
+  --form-bg-color: #fff;
+  --select-menu-border-color: #000;
+  --select-menu-bg-color: #fff;
+  --focus-selected-bg-color: #000080;
+  --focus-selected-color: #fff;
+  --form-border-left-top: #84888c;
+  --form-border-bottom-right: #fff;
+  --form-box-shadow-top-left: #000;
+  --form-box-shadow-bottom-right: #c0c0c0;
+  --form-error-color: #d9534f;
+  --form-outline-color: #000;
+
+  /* CALENDAR COLORS */
+  --calendar-day-selected-bg: #000080;
+  --calendar-day-selected-color: #fff;
+
+  /* START MENU */
+  --start-menu-windows-95-bg: #84888c;
+  --start-menu-windows-95-color: #c0c4c8;
+  --start-menu-bg-color: #c0c4c8;
+  --start-menu-bg-on-hover: #0000a8;
+  --start-menu-color-on-hover: #fff;
+}
