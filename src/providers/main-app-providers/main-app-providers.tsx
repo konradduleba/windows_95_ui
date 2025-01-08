@@ -14,6 +14,8 @@ import { AuthProvider } from "@providers/auth-provider/auth.provider";
 import { ActiveTasks } from "@layouts/active-tasks/active-tasks";
 import { Desktop } from "@layouts/desktop/desktop";
 
+import "@styles/import-styles";
+
 export const MainAppProviders: FC<PropsWithChildren> = ({ children }) => {
   return (
     <QueryProvider>

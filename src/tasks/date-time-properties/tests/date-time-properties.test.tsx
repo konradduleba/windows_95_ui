@@ -42,25 +42,25 @@ describe("Task: Date Time Properties", async () => {
     taskId: DATE_TIME_PROPERTIES_TASK_ID,
   });
 
-  // describe("Task render properties - Additional:", async () => {
-  //   submitButtonInitiallyDisabled();
-  //   checkTaskMovingAbility(MOVING_ABILITY_PROPS);
-  // });
-  // describe("Date & Time Tab:", async () => {
-  //   describe("Date:", async () => {
-  //     changeMonth();
-  //     changeYear();
-  //     changeDay();
-  //   });
-  //   describe("Time:", async () => {
-  //     changeHour();
-  //     changeMinute();
-  //     changeSecond();
-  //     changeAmPm();
-  //   });
-  // });
-  // describe("Time Zone Tab:", async () => {
-  //   changeTimeZone();
-  //   uncheckAdjustClockCheckbox();
-  // });
+  describe("Task render properties - Additional:", async () => {
+    submitButtonInitiallyDisabled();
+    checkTaskMovingAbility(MOVING_ABILITY_PROPS);
+  });
+  describe("Date & Time Tab:", async () => {
+    describe("Date:", async () => {
+      changeMonth();
+      changeYear();
+      changeDay();
+    });
+    describe("Time:", async () => {
+      changeHour();
+      changeMinute();
+      changeSecond();
+      changeAmPm();
+    });
+  });
+  describe("Time Zone Tab:", async () => {
+    changeTimeZone();
+    uncheckAdjustClockCheckbox();
+  });
 });

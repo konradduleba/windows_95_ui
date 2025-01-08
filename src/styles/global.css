@@ -8,8 +8,6 @@
 
 :root {
   --screen-border-radius: 8px;
-  --screen-width: 768px;
-  --screen-height: calc(var(--screen-width) * 0.75);
   --windows-font-family: "MS Sans Serif";
   --border-left-top: #ffffff;
   --border-right-bottom: #1d1b1b;
