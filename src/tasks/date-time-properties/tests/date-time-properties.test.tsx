@@ -3,6 +3,7 @@ import { describe } from "vitest";
 import { checkTaskRender } from "@tests/check-task-render";
 
 import {
+  checkCloseTask,
   checkTaskMovingAbility,
   submitButtonInitiallyDisabled,
 } from "@shared/explorer-window/providers/explorer-window-provider/tests";
@@ -63,4 +64,6 @@ describe("Task: Date Time Properties", async () => {
     changeTimeZone();
     uncheckAdjustClockCheckbox();
   });
+
+  checkCloseTask({ containerId: DATE_TIME_TEST_ID });
 });
