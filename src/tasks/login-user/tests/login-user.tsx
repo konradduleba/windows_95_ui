@@ -1,9 +1,15 @@
 import { describe } from "vitest";
 
-import { authenticateUser } from "./utils";
+import { checkIsLoginIsVisible } from "./utils/general";
 
-export const loginUserTest = async () => {
+import { authenticateUser } from "./utils/authenticate";
+
+import { notAuthenticateUser } from "./utils/not-authenticate";
+
+export const loginUserTest = () => {
   describe("Task: Login User", async () => {
-    await authenticateUser();
+    checkIsLoginIsVisible();
+    notAuthenticateUser();
+    authenticateUser();
   });
 };
