@@ -6,27 +6,17 @@ import { BootstrapContext } from "./bootstrap.context";
 
 import { useLoadingState, useMultipleQueries } from "./hooks";
 
-import { BootstrapScreen, WindowsLogo } from "./components";
+import { WindowsLogo } from "./components";
 
 import { BootstrapContextProps } from "./types";
 
 export const BoostrapProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { progress, progressIndicator, onUpdateProgress, showWindowsLogo } =
-    useLoadingState();
+  const { progress, onUpdateProgress } = useLoadingState();
   const { dateTime, timeDate, userAuth } = useMultipleQueries({
     onUpdateProgress,
   });
 
   if (progress !== 100) {
-    return (
-      <BootstrapScreen
-        progress={progress}
-        progressIndicator={progressIndicator}
-      />
-    );
-  }
-
-  if (showWindowsLogo) {
     return <WindowsLogo />;
   }
 

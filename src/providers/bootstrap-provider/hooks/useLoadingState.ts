@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import { ProgressIndicator, Providers } from "../types";
 
@@ -7,7 +7,6 @@ import { PROGRESS_INDICATORS_FALLBACK } from "../constants";
 import { getProgressPercent } from "../helpers";
 
 export const useLoadingState = () => {
-  const [showWindowsLogo, setShowWindowsLogo] = useState(true);
   const [progressIndicator, setProgressIndicator] = useState<ProgressIndicator>(
     PROGRESS_INDICATORS_FALLBACK
   );
@@ -23,20 +22,8 @@ export const useLoadingState = () => {
     });
   };
 
-  useEffect(() => {
-    if (progress === 100) {
-      const timerId = setTimeout(() => {
-        setShowWindowsLogo(false);
-      }, 2_000);
-
-      return () => clearTimeout(timerId);
-    }
-  }, [progress]);
-
   return {
     progress,
-    progressIndicator,
     onUpdateProgress,
-    showWindowsLogo,
   };
 };

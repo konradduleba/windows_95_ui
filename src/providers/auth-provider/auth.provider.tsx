@@ -11,6 +11,8 @@ import { AuthContext } from "./auth.context";
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   const { userAuth } = useBootstrap();
 
+  console.log({ userAuth });
+
   if (!userAuth) {
     return <UnauthorizedView />;
   }

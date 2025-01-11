@@ -5,6 +5,8 @@ import { Tooltip } from "@shared/tooltip/tooltip";
 
 import { useDateTime } from "@providers/date-time-provider/hooks";
 
+import { START_MENU_CLOCK_TEST_ID } from "../constants";
+
 import styles from "./time.module.scss";
 
 type TimeProps = {
@@ -20,7 +22,11 @@ export const Time: FC<TimeProps> = ({ onDoubleClick }) => {
 
   return (
     <Tooltip message={message} placement="topRight">
-      <div className={styles.time} onDoubleClick={onDoubleClick}>
+      <div
+        className={styles.time}
+        onDoubleClick={onDoubleClick}
+        data-testid={START_MENU_CLOCK_TEST_ID}
+      >
         <TypographyHeading size="sm">
           {hoursIn12hourFormat}:{minutes}
         </TypographyHeading>
