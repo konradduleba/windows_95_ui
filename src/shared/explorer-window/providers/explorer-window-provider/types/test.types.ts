@@ -5,5 +5,8 @@ export type TestProps = {
 };
 
 export type MovingAbilityProps = TestProps & {
-  position: Position;
+  position: {
+    x?: Position["x"];
+    y: Position["y"];
+  };
 };

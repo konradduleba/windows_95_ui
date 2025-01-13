@@ -29,7 +29,7 @@ const MOVING_ABILITY_PROPS: MovingAbilityProps = {
   position: WINDOW_POSITION,
 };
 
-export const dateTimePropertiesTest = async () => {
+export const dateTimePropertiesTest = () => {
   describe("Task: Date Time Properties", async () => {
     openTask();
     describe("Task render properties - Additional:", async () => {

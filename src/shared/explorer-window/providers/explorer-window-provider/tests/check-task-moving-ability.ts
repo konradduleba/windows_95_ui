@@ -37,13 +37,20 @@ export const checkTaskMovingAbility = ({
     );
 
     const taskPosition = getTaskPosition(container);
+    const currentPosition: Position = {
+      y: position.y,
+      x: position.x || taskPosition.x,
+    };
 
-    checkTaskPosition(position, taskPosition);
+    checkTaskPosition(currentPosition, taskPosition);
 
-    fireEvent.mouseDown(heading, { clientX: position.x, clientY: position.y });
+    fireEvent.mouseDown(heading, {
+      clientX: currentPosition.x,
+      clientY: currentPosition.y,
+    });
 
-    const expectedX = position.x + MOVE_PARAMS.clientX;
-    const expectedY = position.y + MOVE_PARAMS.clientY;
+    const expectedX = currentPosition.x + MOVE_PARAMS.clientX;
+    const expectedY = currentPosition.y + MOVE_PARAMS.clientY;
 
     fireEvent.mouseMove(window, {
       clientX: expectedX,
