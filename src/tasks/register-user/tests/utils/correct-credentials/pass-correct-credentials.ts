@@ -11,11 +11,11 @@ import { RESPONSE_SUCCESS_TEST_ID } from "@tasks/response-success/constants";
 
 import { checkPopup, passCredentials, submitForm } from "../general";
 
-const USERNAME = getRandomUsername();
-const PASSWORD = getRandomPassword();
-const EMAIL = getRandomEmail();
-
 export const passCorrectCredentials = () => {
+  const USERNAME = getRandomUsername();
+  const PASSWORD = getRandomPassword();
+  const EMAIL = getRandomEmail();
+
   it("Pass correct credentials", LONG_WAIT_FOR_OPTIONS, async () => {
     await passCredentials({
       username: USERNAME,

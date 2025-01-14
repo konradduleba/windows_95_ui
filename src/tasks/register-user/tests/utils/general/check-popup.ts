@@ -1,7 +1,7 @@
 import { expect } from "vitest";
 import { screen, waitFor } from "@testing-library/dom";
 
-import { LONG_WAIT_FOR_OPTIONS } from "@tests/mocks/constants";
+import { MEDIUM_WAIT_FOR_OPTIONS } from "@tests/mocks/constants";
 
 type CheckPopupProps = {
   testId: string;
@@ -12,5 +12,5 @@ export const checkPopup = async ({ testId }: CheckPopupProps) => {
     const container = screen.queryByTestId(testId);
 
     expect(container).toBeInTheDocument();
-  }, LONG_WAIT_FOR_OPTIONS);
+  }, MEDIUM_WAIT_FOR_OPTIONS);
 };

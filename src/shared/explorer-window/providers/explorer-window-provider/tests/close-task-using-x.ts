@@ -19,6 +19,7 @@ export const closeTaskUsingX = ({ containerId }: TestProps) => {
     const heading = within(container).getByTestId(
       EXPLORER_WINDOW_HEADER_TEST_ID
     );
+
     const xButton = within(heading).getByTestId(
       EXPLORER_WINDOW_X_CLOSE_BUTTON_TEST_ID
     );
@@ -26,11 +27,7 @@ export const closeTaskUsingX = ({ containerId }: TestProps) => {
     await userEvent.click(xButton);
 
     await waitFor(() => {
-      const heading = within(container).queryByTestId(
-        EXPLORER_WINDOW_HEADER_TEST_ID
-      );
-
-      expect(heading).not.toBeInTheDocument();
+      expect(container).not.toBeInTheDocument();
     });
   });
 };

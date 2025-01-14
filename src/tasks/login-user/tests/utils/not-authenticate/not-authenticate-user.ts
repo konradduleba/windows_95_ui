@@ -1,11 +1,13 @@
 import { describe } from "vitest";
 
+import { closePopupUsingOkButton } from "@tasks/response-error/tests";
+import { LOGIN_USER_TEST_ID } from "@tasks/login-user/constants";
+
 import { passIncorrectCredentials } from "./pass-incorrect-credentials";
-import { closePopup } from "./close-popup";
 
 export const notAuthenticateUser = () => {
   describe("Not authenticate User", async () => {
     passIncorrectCredentials();
-    closePopup();
+    closePopupUsingOkButton({ waitForContainerId: LOGIN_USER_TEST_ID });
   });
 };

@@ -7,7 +7,7 @@ export const getRandomPassword = (): string => {
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
   const numberChars = "0123456789";
-  const symbolChars = "!@#$%^&*()_+[]{}|;:',.<>?/";
+  const symbolChars = "!@#$%^&*()";
 
   const getRandomChar = (chars: string): string =>
     chars[Math.floor(Math.random() * chars.length)];
