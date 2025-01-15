@@ -1,6 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 
-import { useBootstrap } from "@providers/bootstrap-provider/hooks";
+import { useAuthMe } from "@api/auth/query";
+
+import { WindowsLogo } from "@components/windows-logo/windows-logo";
 
 import { AuthContextProps } from "./types";
 
@@ -9,16 +11,18 @@ import { UnauthorizedView } from "./components";
 import { AuthContext } from "./auth.context";
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { userAuth } = useBootstrap();
+  const { data, isLoading } = useAuthMe();
 
-  console.log({ userAuth });
+  if (isLoading) {
+    return <WindowsLogo />;
+  }
 
-  if (!userAuth) {
+  if (!data) {
     return <UnauthorizedView />;
   }
 
   const properties: AuthContextProps = {
-    userAuth,
+    userAuth: data,
   };
 
   return (

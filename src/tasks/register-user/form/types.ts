@@ -1,3 +1,8 @@
+export enum REGISTER_AUTO_COMPLETE_KEYS {
+  USERNAME = "username",
+  PASSWORD = "new-password",
+}
+
 export enum REGISTER_USER_FORM_NAME_KEYS {
   EMAIL = "email",
   USERNAME = "username",

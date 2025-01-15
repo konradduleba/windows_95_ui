@@ -14,6 +14,7 @@ export const FormTextInput: FC<FormTextInputProps> = ({
   testId,
   label,
   isPassword,
+  autocompleteId,
 }) => {
   const { value, isInvalid, onHandleChange, errorMessage } =
     useHandleValueChange({ name });
@@ -29,6 +30,7 @@ export const FormTextInput: FC<FormTextInputProps> = ({
           onChange={onHandleChange}
           className={cn(styles.input, { [styles.invalid]: isInvalid })}
           data-testid={testId}
+          autoComplete={autocompleteId}
         />
         {errorMessage && <ErrorMessage messageId={errorMessage} />}
       </div>

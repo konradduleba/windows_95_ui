@@ -5,4 +5,5 @@ export type FormTextInputProps = {
   name: string;
   label?: ReactNode;
   isPassword?: boolean;
+  autocompleteId?: string;
 };

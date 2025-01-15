@@ -2,17 +2,17 @@ import { FC, PropsWithChildren } from "react";
 
 import { DateTimeProvider } from "@providers/date-time-provider/date-time.provider";
 
+import { WindowsLogo } from "@components/windows-logo/windows-logo";
+
 import { BootstrapContext } from "./bootstrap.context";
 
 import { useLoadingState, useMultipleQueries } from "./hooks";
-
-import { WindowsLogo } from "./components";
 
 import { BootstrapContextProps } from "./types";
 
 export const BoostrapProvider: FC<PropsWithChildren> = ({ children }) => {
   const { progress, onUpdateProgress } = useLoadingState();
-  const { dateTime, timeDate, userAuth } = useMultipleQueries({
+  const { dateTime } = useMultipleQueries({
     onUpdateProgress,
   });
 
@@ -20,14 +20,12 @@ export const BoostrapProvider: FC<PropsWithChildren> = ({ children }) => {
     return <WindowsLogo />;
   }
 
-  if (!dateTime || !timeDate) {
+  if (!dateTime) {
     return null;
   }
 
   const properties: BootstrapContextProps = {
     dateTime,
-    timeDate,
-    userAuth,
   };
 
   return (

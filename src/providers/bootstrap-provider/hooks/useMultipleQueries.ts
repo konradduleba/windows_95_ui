@@ -1,9 +1,4 @@
-import {
-  useGetDateTimeQuery,
-  useGetDateTimeQueryTest,
-} from "@api/date-time/query";
-
-import { useAuthMe } from "@api/auth/query";
+import { useGetDateTimeQuery } from "@api/date-time/query";
 
 import { Providers } from "../types";
 
@@ -18,17 +13,7 @@ export const useMultipleQueries = ({
     onSettled: () => onUpdateProgress(Providers.DATE_TIME),
   });
 
-  const timeDate = useGetDateTimeQueryTest({
-    onSettled: () => onUpdateProgress(Providers.TIME_DATE),
-  });
-
-  const userAuth = useAuthMe({
-    onSettled: () => onUpdateProgress(Providers.AUTH),
-  });
-
   return {
     dateTime: dateTime.data,
-    timeDate: timeDate.data,
-    userAuth: userAuth.data,
   };
 };

@@ -22,19 +22,19 @@ export const MainAppProviders: FC<PropsWithChildren> = ({ children }) => {
       <ScreenPropertiesProvider>
         <LangProvider>
           <MainWrapper>
-            <BoostrapProvider>
-              <DisplayPropertiesProvider>
-                <TaskManagerProvider>
-                  <AuthProvider>
+            <DisplayPropertiesProvider>
+              <TaskManagerProvider>
+                <AuthProvider>
+                  <BoostrapProvider>
                     <StartAppProvider>
                       <ActiveTasks />
                       {children}
                       <Desktop />
                     </StartAppProvider>
-                  </AuthProvider>
-                </TaskManagerProvider>
-              </DisplayPropertiesProvider>
-            </BoostrapProvider>
+                  </BoostrapProvider>
+                </AuthProvider>
+              </TaskManagerProvider>
+            </DisplayPropertiesProvider>
           </MainWrapper>
         </LangProvider>
       </ScreenPropertiesProvider>
