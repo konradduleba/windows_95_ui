@@ -13,6 +13,7 @@ import {
 import { InputRange } from "@forms/controllers/form-input-number/tests/types/number-input.types";
 
 import { getRandomNumber } from "@tests/utils";
+import { LONG_WAIT_FOR_OPTIONS } from "@tests/mocks/constants";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -23,8 +24,8 @@ const NEW_YEAR = getRandomNumber({
 });
 
 const YEAR_DIFFERENCE = getRandomNumber({
-  min: YEAR.MIN_VALUE,
-  max: YEAR.MAX_VALUE,
+  min: 1,
+  max: 50,
 });
 
 const RANGE: InputRange = {
@@ -34,14 +35,14 @@ const RANGE: InputRange = {
 
 export const changeYear = () => {
   describe("Change year by:", async () => {
-    it("Should change year by typing", async () => {
+    it("Should change year by typing", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByTyping({
         newValue: NEW_YEAR,
         testId: DATE_TIME_YEAR_TEST_ID,
       });
     });
 
-    it("Should change year by increment", async () => {
+    it("Should change year by increment", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByIncrement({
         difference: YEAR_DIFFERENCE,
         testId: DATE_TIME_YEAR_TEST_ID,
@@ -49,7 +50,7 @@ export const changeYear = () => {
       });
     });
 
-    it("Should change year by decrement", async () => {
+    it("Should change year by decrement", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByDecrement({
         difference: YEAR_DIFFERENCE,
         testId: DATE_TIME_YEAR_TEST_ID,

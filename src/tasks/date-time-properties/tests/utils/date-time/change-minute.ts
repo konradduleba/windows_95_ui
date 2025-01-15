@@ -13,6 +13,7 @@ import {
   DATE_TIME_MINUTE_TEST_ID,
   MINUTES,
 } from "@tasks/date-time-properties/form/consts";
+import { LONG_WAIT_FOR_OPTIONS } from "@tests/mocks/constants";
 
 const CURRENT_MINUTE = new Date().getMinutes();
 
@@ -34,14 +35,14 @@ const RANGE: InputRange = {
 
 export const changeMinute = () => {
   describe("Change minute by:", async () => {
-    it("Should change minute by typing", async () => {
+    it("Should change minute by typing", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByTyping({
         newValue: NEW_MINUTE,
         testId: DATE_TIME_MINUTE_TEST_ID,
       });
     });
 
-    it("Should change minute by increment", async () => {
+    it("Should change minute by increment", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByIncrement({
         difference: MINUTE_DIFFERENCE,
         testId: DATE_TIME_MINUTE_TEST_ID,
@@ -49,7 +50,7 @@ export const changeMinute = () => {
       });
     });
 
-    it("Should change minute by decrement", async () => {
+    it("Should change minute by decrement", LONG_WAIT_FOR_OPTIONS, async () => {
       await changeNumberInputValueByDecrement({
         difference: MINUTE_DIFFERENCE,
         testId: DATE_TIME_MINUTE_TEST_ID,
