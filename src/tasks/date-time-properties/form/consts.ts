@@ -1,5 +1,5 @@
 export const YEAR = {
-  MIN_VALUE: 1970,
+  MIN_VALUE: 1,
   MAX_VALUE: 2137,
 };
 

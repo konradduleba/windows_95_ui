@@ -15,9 +15,22 @@ export const useHandleValueChange = ({
 
   const onHandleChange = ({ target }: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = target.value;
+    const numberValue = Number(inputValue);
 
-    if (inputValue === "" || NUMBER_REGEX.test(inputValue)) {
-      field.onChange(inputValue);
+    if (inputValue === "") {
+      return field.onChange(inputValue);
+    }
+
+    if (inputValue.length > String(max).length) {
+      return;
+    }
+
+    if (numberValue < min || numberValue > max) {
+      return;
+    }
+
+    if (NUMBER_REGEX.test(inputValue)) {
+      field.onChange(parseFloat(inputValue));
     }
   };
 
