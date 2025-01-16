@@ -13,7 +13,7 @@ import { useGetTaskPositionWidthCenter } from "@shared/explorer-window/hooks";
 
 import {
   LOGIN_USER_REGISTER_TEST_ID,
-  LOGIN_USER_TASK_ID,
+  LOGIN_USER_TASK,
   LOGIN_USER_TEST_ID,
   WINDOW_POSITION_Y,
   WINDOW_WIDTH,
@@ -52,7 +52,7 @@ export const usePrepareTaskWindowData = (): ExplorerWindowProps => {
 
   return {
     testId: LOGIN_USER_TEST_ID,
-    taskId: LOGIN_USER_TASK_ID,
+    taskId: LOGIN_USER_TASK.id,
     width: WINDOW_WIDTH,
     position: WINDOW_POSITION,
     title: <Trans id={LOGIN_USER_MESSAGES.TITLE.id} />,

@@ -3,7 +3,7 @@ import { Trans } from "@lingui/react";
 import { FormCheckbox } from "@forms/controllers";
 
 import { DATE_TIME_FORM_NAME_KEYS } from "@tasks/date-time-properties/form/types";
-import { ADJUST_CLOCK_TEST_ID } from "@tasks/date-time-properties/constants/date-time-properties.consts";
+import { ADJUST_CLOCK_TEST_ID } from "@tasks/date-time-properties/constants";
 
 import { TypographyText } from "@shared/typography";
 

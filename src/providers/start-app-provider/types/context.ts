@@ -1,3 +1,4 @@
+import { Task } from "@providers/task-manager-provider/types";
 import { ReactNode } from "react";
 
 export enum StartAppTypes {
@@ -18,7 +19,7 @@ export type StartAppFolder = StartAppCommonTypes & {
 
 export type StartAppApplication = StartAppCommonTypes & {
   type: StartAppTypes.APP;
-  content: ReactNode;
+  task: Task;
 };
 
 export type StartApp = StartAppFolder | StartAppApplication;

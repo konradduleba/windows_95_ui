@@ -10,7 +10,6 @@
       "@tasks/*": ["tasks/*"],
       "@shared/*": ["shared/*"],
       "@forms/*": ["forms/*"],
-      "@constants/*": ["constants/*"],
       "@hooks/*": ["hooks/*"],
       "@tests/*": ["tests/*"],
       "@locales/*": ["locales/*"],

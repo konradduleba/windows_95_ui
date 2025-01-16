@@ -1,18 +1,13 @@
+import { v4 as uuidv4 } from "uuid";
 import { Trans } from "@lingui/react";
 
 import SvgHelpBook from "@icons/help-book";
 import SvgProgramWait from "@icons/program-wait";
 import SvgTurnOffDisplay from "@icons/turn-off-display";
 
-import { Run } from "@tasks/run/run";
-import { ShutDown } from "@tasks/shut-down/shut-down";
-import { Help } from "@tasks/help/help";
-
-import {
-  HELP_TASK_ID,
-  RUN_TASK_ID,
-  SHUT_DOWN_TASK_ID,
-} from "@constants/task-ids";
+import { HELP_TASK } from "@tasks/help/constants";
+import { RUN_TASK } from "@tasks/run/constants";
+import { SHUT_DOWN_TASK } from "@tasks/shut-down/constants";
 
 import { StartAppApplication, StartAppTypes } from "../types";
 
@@ -20,24 +15,24 @@ import { MESSAGES } from "../translations";
 
 export const HELP_APP: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: HELP_TASK_ID,
+  id: uuidv4(),
   icon: <SvgHelpBook />,
   value: <Trans id={MESSAGES.HELP.id} />,
-  content: <Help />,
+  task: HELP_TASK,
 };
 
 export const RUN_APP: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: RUN_TASK_ID,
+  id: uuidv4(),
   icon: <SvgProgramWait />,
   value: <Trans id={MESSAGES.RUN.id} />,
-  content: <Run />,
+  task: RUN_TASK,
 };
 
 export const SHUT_DOWN_APP: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: SHUT_DOWN_TASK_ID,
+  id: uuidv4(),
   icon: <SvgTurnOffDisplay />,
   value: <Trans id={MESSAGES.SHUT_DOWN.id} />,
-  content: <ShutDown />,
+  task: SHUT_DOWN_TASK,
 };

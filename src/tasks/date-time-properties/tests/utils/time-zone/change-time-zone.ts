@@ -1,6 +1,6 @@
 import { it } from "vitest";
 
-import { TIME_ZONE_PICKER_TEST_ID } from "@tasks/date-time-properties/constants/date-time-properties.consts";
+import { TIME_ZONE_PICKER_TEST_ID } from "@tasks/date-time-properties/constants";
 
 import { changeSelectValue } from "@forms/controllers/form-single-select/tests";
 

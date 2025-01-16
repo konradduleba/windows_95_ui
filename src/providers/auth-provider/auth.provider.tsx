@@ -6,7 +6,7 @@ import { WindowsLogo } from "@components/windows-logo/windows-logo";
 
 import { AuthContextProps } from "./types";
 
-import { UnauthorizedView } from "./components";
+import { UnauthenticatedView } from "./components";
 
 import { AuthContext } from "./auth.context";
 
@@ -18,7 +18,7 @@ export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
   }
 
   if (!data) {
-    return <UnauthorizedView />;
+    return <UnauthenticatedView />;
   }
 
   const properties: AuthContextProps = {

@@ -1,7 +1,6 @@
 import { FC } from "react";
 
 import { useTaskManager } from "@providers/task-manager-provider/hooks";
-import { Task } from "@providers/task-manager-provider/types";
 import { StartApp, StartAppTypes } from "@providers/start-app-provider/types";
 
 import { ItemRow, SubApps } from "./components";
@@ -12,18 +11,14 @@ type ItemProps = {
 };
 
 export const Item: FC<ItemProps> = ({ appProps, depth = 0 }) => {
-  const { icon, id, type, value } = appProps;
+  const { icon, type, value } = appProps;
   const { onAddTask } = useTaskManager();
 
   if (type === StartAppTypes.APP) {
-    const { content } = appProps;
+    const { task } = appProps;
 
     const onClickApp = () => {
-      const dateTimePropertiesTask: Task = {
-        id,
-        content,
-      };
-      onAddTask(dateTimePropertiesTask);
+      onAddTask(task);
     };
 
     return <ItemRow icon={icon} value={value} onClick={onClickApp} />;

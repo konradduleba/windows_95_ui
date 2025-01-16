@@ -1,14 +1,6 @@
 import { Trans } from "@lingui/react";
 import { v4 as uuidv4 } from "uuid";
 
-import {
-  MS_DOS_PROMPT_TASK_ID,
-  NOTEPAD_TASK_ID,
-  ONLINE_REGISTRATION_TASK_ID,
-  SCAN_DISK_TASK_ID,
-  WINDOWS_EXPLORER_TASK_ID,
-} from "@constants/task-ids";
-
 import SvgProgramFolder from "@icons/program-folder";
 import SvgSearchFolder from "@icons/search-folder";
 import SvgMSDOS from "@icons/ms-dos";
@@ -16,11 +8,11 @@ import SvgNotepad from "@icons/notepad";
 import SvgSignWhiteLetter from "@icons/sign-white-letter";
 import SvgDiscDrive from "@icons/disc-drive";
 
-import { WindowsExplorer } from "@tasks/windows-explorer/windows-explorer";
-import { MsDOSPrompt } from "@tasks/ms-dos-prompt/ms-dos-prompt";
-import { Notepad } from "@tasks/notepad/notepad";
-import { OnlineRegistration } from "@tasks/online-registration/online-registration";
-import { ScanDisk } from "@tasks/scan-disk/scan-disk";
+import { SCAN_DISK_TASK } from "@tasks/scan-disk/constants";
+import { NOTEPAD_TASK } from "@tasks/notepad/constants";
+import { ONLINE_REGISTRATION_TASK } from "@tasks/online-registration/constants";
+import { MS_DOS_TASK } from "@tasks/ms-dos-prompt/constants";
+import { WINDOWS_EXPLORER_TASK } from "@tasks/windows-explorer/constants";
 
 import { StartAppApplication, StartAppFolder, StartAppTypes } from "../types";
 
@@ -28,10 +20,10 @@ import { MESSAGES } from "../translations";
 
 const SCAN_DISK: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: SCAN_DISK_TASK_ID,
+  id: uuidv4(),
   icon: <SvgDiscDrive />,
   value: <Trans id={MESSAGES.SCAN_DISK.id} />,
-  content: <ScanDisk />,
+  task: SCAN_DISK_TASK,
 };
 
 const SYSTEM_TOOLS_FOLDER: StartAppFolder = {
@@ -44,18 +36,18 @@ const SYSTEM_TOOLS_FOLDER: StartAppFolder = {
 
 const NOTEPAD: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: NOTEPAD_TASK_ID,
+  id: uuidv4(),
   icon: <SvgNotepad />,
   value: <Trans id={MESSAGES.NOTEPAD.id} />,
-  content: <Notepad />,
+  task: NOTEPAD_TASK,
 };
 
 const ONLINE_REGISTRATION: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: ONLINE_REGISTRATION_TASK_ID,
+  id: uuidv4(),
   icon: <SvgSignWhiteLetter />,
   value: <Trans id={MESSAGES.ONLINE_REGISTRATION.id} />,
-  content: <OnlineRegistration />,
+  task: ONLINE_REGISTRATION_TASK,
 };
 
 const ACCESSORIES_FOLDER: StartAppFolder = {
@@ -76,18 +68,18 @@ const START_UP_FOLDER: StartAppFolder = {
 
 const MS_DOS_PROMPT: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: MS_DOS_PROMPT_TASK_ID,
+  id: uuidv4(),
   icon: <SvgMSDOS />,
   value: <Trans id={MESSAGES.MS_DOS_PROMPT.id} />,
-  content: <MsDOSPrompt />,
+  task: MS_DOS_TASK,
 };
 
 const WINDOWS_EXPLORER: StartAppApplication = {
   type: StartAppTypes.APP,
-  id: WINDOWS_EXPLORER_TASK_ID,
+  id: uuidv4(),
   icon: <SvgSearchFolder />,
   value: <Trans id={MESSAGES.WINDOWS_EXPLORER.id} />,
-  content: <WindowsExplorer />,
+  task: WINDOWS_EXPLORER_TASK,
 };
 
 export const PROGRAMS_FOLDER: StartAppFolder = {

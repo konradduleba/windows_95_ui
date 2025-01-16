@@ -11,7 +11,7 @@ import {
 import { TASK_FOOTER_MESSAGES } from "@shared/translations";
 
 import {
-  DATE_TIME_PROPERTIES_TASK_ID,
+  DATE_TIME_PROPERTIES_TASK,
   DATE_TIME_TEST_ID,
   WINDOW_POSITION,
   WINDOW_TITLE,
@@ -50,7 +50,7 @@ export const usePrepareTaskWindowData = (): ExplorerWindowProps => {
 
   return {
     testId: DATE_TIME_TEST_ID,
-    taskId: DATE_TIME_PROPERTIES_TASK_ID,
+    taskId: DATE_TIME_PROPERTIES_TASK.id,
     width: WINDOW_WIDTH,
     position: WINDOW_POSITION,
     title: WINDOW_TITLE,

@@ -2,6 +2,6 @@ export {
   WINDOW_POSITION_Y,
   LOGIN_USER_REGISTER_TEST_ID,
   WINDOW_WIDTH,
-  LOGIN_USER_TASK_ID,
+  LOGIN_USER_TASK,
   LOGIN_USER_TEST_ID,
 } from "./login-user.consts";
