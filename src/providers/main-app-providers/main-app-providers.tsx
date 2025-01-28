@@ -10,6 +10,7 @@ import { TaskManagerProvider } from "@providers/task-manager-provider/task-manag
 import { LangProvider } from "@providers/lang-provider/lang.provider";
 import { BoostrapProvider } from "@providers/bootstrap-provider/bootstrap.provider";
 import { AuthProvider } from "@providers/auth-provider/auth.provider";
+import { UserSessionProvider } from "@providers/user-session-provider/user-session.provider";
 
 import { ActiveTasks } from "@layouts/active-tasks/active-tasks";
 import { Desktop } from "@layouts/desktop/desktop";
@@ -23,17 +24,19 @@ export const MainAppProviders: FC<PropsWithChildren> = ({ children }) => {
         <LangProvider>
           <MainWrapper>
             <DisplayPropertiesProvider>
-              <TaskManagerProvider>
-                <AuthProvider>
-                  <BoostrapProvider>
-                    <StartAppProvider>
-                      <ActiveTasks />
-                      {children}
-                      <Desktop />
-                    </StartAppProvider>
-                  </BoostrapProvider>
-                </AuthProvider>
-              </TaskManagerProvider>
+              <UserSessionProvider>
+                <TaskManagerProvider>
+                  <AuthProvider>
+                    <BoostrapProvider>
+                      <StartAppProvider>
+                        <ActiveTasks />
+                        {children}
+                        <Desktop />
+                      </StartAppProvider>
+                    </BoostrapProvider>
+                  </AuthProvider>
+                </TaskManagerProvider>
+              </UserSessionProvider>
             </DisplayPropertiesProvider>
           </MainWrapper>
         </LangProvider>

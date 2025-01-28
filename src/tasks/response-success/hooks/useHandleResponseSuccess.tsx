@@ -3,7 +3,10 @@ import { Task } from "@providers/task-manager-provider/types";
 
 import { ResponseSuccess, ResponseSuccessProps } from "../response-success";
 
-import { RESPONSE_SUCCESS_TASK_ID } from "../constants";
+import {
+  RESPONSE_SUCCESS_ACCESS,
+  RESPONSE_SUCCESS_TASK_ID,
+} from "../constants";
 
 export const useHandleResponseSuccess = () => {
   const { onAddTask } = useTaskManager();
@@ -12,6 +15,7 @@ export const useHandleResponseSuccess = () => {
     const successTask: Task = {
       id: RESPONSE_SUCCESS_TASK_ID,
       content: <ResponseSuccess {...props} />,
+      access: RESPONSE_SUCCESS_ACCESS,
     };
 
     onAddTask(successTask);

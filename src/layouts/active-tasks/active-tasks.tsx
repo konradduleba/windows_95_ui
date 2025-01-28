@@ -1,13 +1,13 @@
 import { FC, Fragment } from "react";
 
-import { useTaskManager } from "@providers/task-manager-provider/hooks";
+import { useGetListHierarchy } from "./hooks";
 
 export const ActiveTasks: FC = () => {
-  const { tasks } = useTaskManager();
+  const { reorderedTasks } = useGetListHierarchy();
 
   return (
     <>
-      {tasks.map(({ content, id }) => (
+      {reorderedTasks.map(({ content, id }) => (
         <Fragment key={id}>{content}</Fragment>
       ))}
     </>

@@ -1,13 +1,4 @@
-export enum UserRole {
-  ADMIN = "ADMIN",
-  USER = "USER",
-}
-
-export type AuthMe = {
-  userId: string;
-  username: string;
-  role: UserRole;
-};
+import { UserRole } from "@providers/user-session-provider/types/user";
 
 export type LoginPayload = {
   username: string;

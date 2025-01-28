@@ -9,25 +9,18 @@ import {
   Position,
 } from "@shared/explorer-window/providers/explorer-window-provider/types";
 import { TASK_FOOTER_MESSAGES } from "@shared/translations";
-
-import { GenericResponseError } from "@api/types";
+import { useGetTaskPositionWidthCenter } from "@shared/explorer-window/hooks";
 
 import {
   FOOTER_ALIGN,
-  RESPONSE_ERROR_TASK_ID,
   RESPONSE_ERROR_TEST_ID,
   WINDOW_POSITION_Y,
   WINDOW_WIDTH,
 } from "../../../constants";
 
 import { RESPONSE_ERROR_MESSAGES } from "../translations";
-import { useGetTaskPositionWidthCenter } from "@shared/explorer-window/hooks";
 
-type UsePrepareTaskWindowData = Pick<GenericResponseError, "statusCode">;
-
-export const usePrepareTaskWindowData = ({
-  statusCode,
-}: UsePrepareTaskWindowData): ExplorerWindowProps => {
+export const usePrepareTaskWindowData = (): ExplorerWindowProps => {
   const { getWidthTaskCenter } = useGetTaskPositionWidthCenter();
   const WINDOW_ACTIONS: Action[] = [];
 
@@ -37,9 +30,7 @@ export const usePrepareTaskWindowData = ({
     value: <Trans id={TASK_FOOTER_MESSAGES.OK.id} />,
   };
 
-  const TITLE = (
-    <Trans id={RESPONSE_ERROR_MESSAGES.TITLE.id} values={{ statusCode }} />
-  );
+  const TITLE = <Trans id={RESPONSE_ERROR_MESSAGES.TITLE.id} />;
 
   const WINDOW_BUTTONS: FooterButton[] = [OK_BUTTON];
 
@@ -50,7 +41,7 @@ export const usePrepareTaskWindowData = ({
 
   return {
     testId: RESPONSE_ERROR_TEST_ID,
-    taskId: RESPONSE_ERROR_TASK_ID,
+    taskId: uuidv4(),
     width: WINDOW_WIDTH,
     position: WINDOW_POSITION,
     title: TITLE,

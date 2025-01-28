@@ -3,7 +3,7 @@ import { Trans } from "@lingui/react";
 
 import { STATUS_CODE_MESSAGES } from "./translations";
 
-export const useGetErrorMessage = ({
+export const getErrorMessage = ({
   response,
   statusCode,
 }: GenericResponseError) => {

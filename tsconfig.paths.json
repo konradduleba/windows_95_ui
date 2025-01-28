@@ -14,7 +14,8 @@
       "@tests/*": ["tests/*"],
       "@locales/*": ["locales/*"],
       "@customTypes/*": ["types/*"],
-      "@styles/*": ["styles/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     }
   }
 }

@@ -1,26 +1,28 @@
 import { FC, PropsWithChildren, ReactNode } from "react";
 
-import { GenericResponseError } from "@api/types";
-
 import { ExplorerWindow } from "@shared/explorer-window/explorer-window";
 
 import { usePrepareTaskWindowData } from "./hooks";
 
 import styles from "./task-window.module.scss";
 
-type TaskWindowProps = Pick<GenericResponseError, "statusCode"> & {
+type TaskWindowProps = {
   customTitle?: ReactNode;
+  customTaskId?: string;
 };
 
 export const TaskWindow: FC<PropsWithChildren<TaskWindowProps>> = ({
   children,
-  statusCode,
   customTitle,
+  customTaskId,
 }) => {
-  const properties = usePrepareTaskWindowData({ statusCode });
+  const properties = usePrepareTaskWindowData();
+
+  const title = customTitle || properties.title;
+  const taskId = customTaskId || properties.taskId;
 
   return (
-    <ExplorerWindow {...properties} title={customTitle || properties.title}>
+    <ExplorerWindow {...properties} title={title} taskId={taskId}>
       <div className={styles.responseError}>{children}</div>
     </ExplorerWindow>
   );

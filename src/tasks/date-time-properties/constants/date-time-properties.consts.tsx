@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import { Position } from "@shared/explorer-window/providers/explorer-window-provider/types";
 
 import { Task } from "@providers/task-manager-provider/types";
-import { UserRole } from "@providers/auth-provider/types";
+import { UserRole } from "@providers/user-session-provider/types";
 
 import { DateTimeProperties } from "../date-time-properties";
 
@@ -15,7 +15,7 @@ export const WINDOW_POSITION: Position = {
 export const DATE_TIME_PROPERTIES_TASK: Task = {
   id: uuidv4(),
   content: <DateTimeProperties />,
-  access: [UserRole.ADMIN, UserRole.USER],
+  access: [UserRole.ADMIN],
 };
 
 export const WINDOW_WIDTH = 500;

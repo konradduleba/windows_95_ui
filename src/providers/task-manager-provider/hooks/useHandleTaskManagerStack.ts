@@ -2,21 +2,28 @@ import { useState } from "react";
 
 import { Task, TaskId, TaskManagerContextProps } from "../types";
 
-import { checkIsTaskAlreadyInUse } from "../helpers";
+import { useCheckTaskAccess } from "./useCheckTaskAccess";
+
+import { checkIsTaskAlreadyInUse, getAccessDeniedTask } from "../helpers";
 
 export const useHandleTaskManagerStack = (): TaskManagerContextProps => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [activeTaskId, setActiveTaskId] = useState<TaskId>("");
+  const { checkTaskAccess } = useCheckTaskAccess();
 
   const onAddTask = (newTask: Task) => {
-    const { id } = newTask;
+    const { access } = newTask;
+
+    const hasAccess = checkTaskAccess(access);
 
     setTasks((prevTasks: Task[]) => {
-      const isTaskInUse = checkIsTaskAlreadyInUse(id, prevTasks);
+      const taskToAdd = hasAccess ? newTask : getAccessDeniedTask();
 
-      setActiveTaskId(id);
+      const isTaskInUse = checkIsTaskAlreadyInUse(taskToAdd.id, prevTasks);
 
-      const newTasks = isTaskInUse ? [...prevTasks] : [...prevTasks, newTask];
+      setActiveTaskId(taskToAdd.id);
+
+      const newTasks = isTaskInUse ? [...prevTasks] : [...prevTasks, taskToAdd];
 
       return newTasks;
     });

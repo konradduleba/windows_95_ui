@@ -1,5 +1,5 @@
-import { AuthMe } from "./auth";
+import { Session } from "./auth";
 
 export type AuthContextProps = {
-  userAuth: AuthMe;
+  user: Pick<Session, "role" | "userId" | "username">;
 };

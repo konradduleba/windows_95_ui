@@ -1,10 +1,13 @@
 import { client } from "@api/client";
 
-import { AuthMe, Session, LoginPayload } from "@providers/auth-provider/types";
+import { LoginPayload } from "@providers/auth-provider/types";
+
+import { Session } from "@providers/auth-provider/types/auth";
+import { User } from "@providers/user-session-provider/types";
 
 import { AUTH_API_PATHS } from "./api-paths";
 
-export const getAuthMe = async (): Promise<AuthMe> => {
+export const getAuthMe = async (): Promise<User> => {
   return client.get(AUTH_API_PATHS.ME);
 };
 

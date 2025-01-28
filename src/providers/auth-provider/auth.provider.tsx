@@ -1,8 +1,6 @@
 import { FC, PropsWithChildren } from "react";
 
-import { useAuthMe } from "@api/auth/query";
-
-import { WindowsLogo } from "@components/windows-logo/windows-logo";
+import { useUserSession } from "@providers/user-session-provider/hooks";
 
 import { AuthContextProps } from "./types";
 
@@ -11,18 +9,14 @@ import { UnauthenticatedView } from "./components";
 import { AuthContext } from "./auth.context";
 
 export const AuthProvider: FC<PropsWithChildren> = ({ children }) => {
-  const { data, isLoading } = useAuthMe();
+  const { userSession } = useUserSession();
 
-  if (isLoading) {
-    return <WindowsLogo />;
-  }
-
-  if (!data) {
+  if (!userSession) {
     return <UnauthenticatedView />;
   }
 
   const properties: AuthContextProps = {
-    userAuth: data,
+    user: userSession,
   };
 
   return (

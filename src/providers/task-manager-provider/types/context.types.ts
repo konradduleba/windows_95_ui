@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-import { UserRole } from "@providers/auth-provider/types";
+import { UserRole } from "@providers/user-session-provider/types";
 
 export type TaskId = string;
 
